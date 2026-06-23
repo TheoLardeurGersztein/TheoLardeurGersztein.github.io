@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Cinematech</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="single is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<div id="header"></div>
+		<script>
+			fetch("header.html")
+				.then(res => res.text())
+				.then(html => {
+					document.getElementById("header").innerHTML = html;
+				});
+		</script>
+
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a href="cinematech.html">Cinematech</a></h2>
+						<p>A personal streaming service for movies and tv shows</p>
+					</div>
+					<div class="meta">
+						<h4 class="name">Technos used : </h4>
+						<div class="technos">
+							<img src="images/django.png" alt="" />
+							<img src="images/react.png" alt="" />
+						</div>
+				</header>
+				<span class="image featured"><img src="images/cinematech/cinematech_lib.png" alt="" /></span>
+
+				<hr>
+
+
+				<div class="feature">
+					<video class="video left" autoplay muted loop playsinline>
+						<source src="images/cinematech/discover.mp4" type="video/mp4">
+					</video>
+					<div class="content">
+						<h3>Discover Movies</h3>
+						<p>
+							Browse the latest releases and discover content matching your interests.
+						</p>
+					</div>
+				</div>
+
+
+				<div class="feature right">
+					<video class="video right" autoplay muted loop playsinline>
+						<source src="images/cinematech/search.mp4" type="video/mp4">
+					</video>
+					<div class="content">
+						<h3>Find Movies</h3>
+						<p>
+							Search your favorite movie.
+						</p>
+					</div>
+				</div>
+
+
+				<div class="feature">
+					<video class="video left" autoplay muted loop playsinline>
+						<source src="images/cinematech/replay.mp4" type="video/mp4">
+					</video>
+
+					<div class="content">
+						<h3>Continue Watching</h3>
+						<p>
+							Don't lose your timecode or your episode, everything is fine.
+						</p>
+					</div>
+				</div>
+
+
+				<div class="feature right">
+					<video class="video right" autoplay muted loop playsinline>
+						<source src="images/cinematech/login.mp4" type="video/mp4">
+					</video>
+					<div class="content">
+						<h3>Split screens</h3>
+						<p>
+							Create profiles and accounts for everyone.
+						</p>
+					</div>
+				</div>
+
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+
+
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+
+	<script>
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				const el = entry.target;
+				if (entry.isIntersecting) {
+					el.classList.add("visible");
+				} else {
+					el.classList.remove("visible");
+				}
+			});
+		}, {
+			threshold: 0.5,
+			rootMargin: "0px 0px -10% 0px"
+		});
+
+		// observe tous les éléments
+		document.querySelectorAll(".feature").forEach((el) => observer.observe(el));
+	</script>
+
+</body>
+</body>
+
+</html>
