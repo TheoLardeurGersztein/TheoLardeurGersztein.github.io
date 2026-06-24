@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Keyframe animator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="single is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <div id="header"></div>
+        <script>
+            fetch("header.html")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("header").innerHTML = html;
+                });
+        </script>
+
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <article class="post">
+                <header>
+                    <div class="title">
+                        <h2><a href="keyframe.html">Keyframe Animator</a></h2>
+                        <p>Unity plugin that enables UI animation using keyframes exported from After Effects</p>
+                    </div>
+                    <div class="meta">
+                        <h4 class="name">Technos used : </h4>
+                        <div class="technos">
+                            <img src="images/unity.svg" alt="" />
+                        </div>
+
+                    </div>
+                </header>
+                <span class="image featured"><img src="images/code.png" alt="" /></span>
+
+                <hr>
+
+
+                <h3>Context</h3>
+
+                <p>
+                    This plugin was originally developed for an interactive film project built in Unity. The motion
+                    design was created in Adobe After Effects, but there was no seamless way to transfer and reproduce
+                    those animations inside Unity.
+                </p>
+
+                <h3>Overview</h3>
+
+                <p>
+                    KeyFrame Animator for Unity bridges the gap between motion design and interactive
+                    development by importing transformation data from After Effects and applying it directly to Unity
+                    components.
+
+                    The plugin allows developers to map animation data such as position, rotation, and scale to UI
+                    elements, including buttons and other interactive components, ensuring that animations behave
+                    exactly as they were designed.
+                </p>
+
+                <h3>Demo</h3>
+
+                <p>
+                    The motion data was tracked in After Effects and applied to the purple button, allowing it to move
+                    in sync with the animated object.
+                </p>
+
+                <video class="keyframe" autoplay muted loop playsinline>
+                    <source src="images/keyframe.mp4" type="video/mp4">
+                </video>
+
+            </article>
+
+        </div>
+
+
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

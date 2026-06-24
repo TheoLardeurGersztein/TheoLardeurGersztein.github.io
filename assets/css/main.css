@@ -2468,6 +2468,8 @@ input[type="radio"]+label:before {
 }
 
 
+/*Cinematech*/
+
 .video.left,
 .video.right {
 	max-width: 60%;
@@ -2525,8 +2527,11 @@ input[type="radio"]+label:before {
 
 }
 
+/* Keyframe */
 
-
+.keyframe {
+	width: 100%;
+}
 
 
 .image.main {
