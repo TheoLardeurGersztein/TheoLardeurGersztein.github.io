@@ -2985,6 +2985,11 @@ ul.posts article header> :last-child {
 	margin-top: 10px;
 }
 
+.map {
+	width: 250px;
+	height: 100%;
+}
+
 .post>header .meta>* {
 	margin: 0 0 1em 0;
 }
